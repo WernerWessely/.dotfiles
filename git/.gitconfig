@@ -1,0 +1,6 @@
+[include]
+	path = ~/.dotfiles/git/me.gitconfig
+
+[includeIf "gitdir:~/proj/br/"]	
+	path = ~/.dotfiles/git/work.gitconfig
+
