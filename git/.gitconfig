@@ -1,6 +1,6 @@
 [include]
-	path = ~/.dotfiles/git/me.gitconfig
+	path = ~/.gitconfig.me
 
 [includeIf "gitdir:~/proj/br/"]	
-	path = ~/.dotfiles/git/work.gitconfig
+	path = ~/.gitconfig.br
 
