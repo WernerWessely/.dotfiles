@@ -4,3 +4,5 @@
 [includeIf "gitdir:~/proj/br/"]	
 	path = ~/.gitconfig.br
 
+[alias]
+	adog = log --all --decorate --oneline --graph
