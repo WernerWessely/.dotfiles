@@ -8,3 +8,4 @@
 	adog = log --all --decorate --oneline --graph
 [core]
 	pager = less -S
+	editor = vim
