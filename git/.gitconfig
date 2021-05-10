@@ -5,7 +5,8 @@
 	path = ~/.gitconfig.br
 
 [alias]
-	adog = log --all --decorate --oneline --graph
+	l = log --all --decorate --abbrev-commit --graph \
+	--format=format:'%C(auto)%h - %d %s %C(reset)%C(dim white) %an (%ar)'
 [core]
 	pager = less -S
 	editor = vim
