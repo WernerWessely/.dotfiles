@@ -2,5 +2,17 @@
 add_newline = false
 
 [character]
-success_symbol = "[➜](bold green) "
-error_symbol = "[✗](bold red) "
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+[java]
+disabled = true
+
+[cmake]
+disabled = true
+
+[python]
+disabled = true
+
+[line_break]
+disabled = true
