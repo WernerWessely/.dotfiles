@@ -15,6 +15,13 @@ zplug load
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 
+# Some aliases:
+alias ls="ls --color"
+alias l="ls -lFh"
+alias la="ls -lAFh"
+alias ..="cd .."
+alias g="git"
+
 # Enable starship prompt:
 eval "$(starship init zsh)"
 
