@@ -1,31 +1,20 @@
-# Load Antigen:
-source ~/antigen.zsh
+# Zplug:
+source ~/.zplug/init.zsh
 
-# Spaceship theme config:
+# Manage zplug itself:
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
-SPACESHIP_PROMPT_ORDER=(
-  dir           # Current directory section
-  git           # Git section (git_branch + git_status)
-  package       # Package version
-  rust          # Rust section
-  exec_time     # Execution time
-  line_sep      # Line break
-  vi_mode       # Vi-mode indicator
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
+# Plugins:
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting"
 
-SPACESHIP_PROMPT_ADD_NEWLINE="false"
-SPACESHIP_PROMPT_SEPARATE_LINE="false"
-SPACESHIP_CHAR_SYMBOL=">"
-SPACESHIP_CHAR_SUFFIX=" "
-SPACESHIP_GIT_PREFIX=""
+zplug load
 
 # Autosuggestions config:
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 
-# Load Antigen configurations:
-antigen init ~/.antigenrc
+# Enable starship prompt:
+eval "$(starship init zsh)"
 
