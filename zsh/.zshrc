@@ -8,6 +8,7 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
+zplug "jeffreytse/zsh-vi-mode"
 
 zplug load
 
