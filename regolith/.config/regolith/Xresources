@@ -6,3 +6,6 @@ i3-wm.binding.ws_next2: Mod4+Right
 i3-wm.binding.ws_prev2: Mod4+Left
 i3-wm.binding.take_next_free: Mod4+grave
 i3-wm.binding.look_selector: Mod4+l
+
+# Make active window marker red:
+i3-wm.client.focused.color.child_border: #ff0000
