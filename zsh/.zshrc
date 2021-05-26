@@ -22,6 +22,7 @@ alias l="ls -lFh"
 alias la="ls -lAFh"
 alias ..="cd .."
 alias g="git"
+alias bat="batcat"
 
 # History settings:
 HISTFILE=~/.zsh_history
