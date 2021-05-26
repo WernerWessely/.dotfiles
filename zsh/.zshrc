@@ -13,7 +13,6 @@ zplug "jeffreytse/zsh-vi-mode"
 zplug load
 
 # Autosuggestions config:
-
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 
 # Some aliases:
@@ -32,4 +31,16 @@ setopt appendhistory
 
 # Enable starship prompt:
 eval "$(starship init zsh)"
+
+function my_bindings() {
+    bindkey '^F' fzf-cd-widget
+}
+
+# fzf config:
+FZF_CTRL_T_COMMAND="fdfind --type f --hidden --follow --exclude .git"
+FZF_ALT_C_COMMAND="fdfind --type d --hidden --follow --exclude .git"
+
+# Set all key bindings after vi mode init:
+zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')
+zvm_after_init_commands+=(my_bindings)
 
