@@ -14,6 +14,7 @@ set undofile
 set incsearch
 set number relativenumber
 set nu rnu
+set noesckeys
 
 let mapleader = " "
 
@@ -30,6 +31,8 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 nnoremap <silent> <leader><space> :Files<CR>
+
+autocmd BufWritePre * %s/\s\+$//e
 
 set colorcolumn=80
 highlight colorcolumn ctermbg=0 guibg=lightgrey
