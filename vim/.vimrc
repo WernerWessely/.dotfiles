@@ -12,6 +12,10 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set number relativenumber
+set nu rnu
+
+let mapleader = " "
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -24,6 +28,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
+
+nnoremap <silent> <leader><space> :Files<CR>
 
 set colorcolumn=80
 highlight colorcolumn ctermbg=0 guibg=lightgrey
