@@ -48,7 +48,7 @@ function my_bindings() {
 
 # fzf config:
 FZF_CTRL_T_COMMAND="fdfind --type f --hidden --follow --exclude .git"
-FZF_CTRL_T_OPTS="--preview 'bat --style=numbers --color=always --line-range :500 {}'"
+FZF_CTRL_T_OPTS="--preview 'batcat --style=numbers --color=always --line-range :500 {}'"
 FZF_ALT_C_COMMAND="fdfind --type d --hidden --follow --exclude .git"
 FZF_ALT_C_OPTS="--preview 'exa --color=always -l {}'"
 
