@@ -14,7 +14,7 @@ set number relativenumber
 set nu rnu
 
 let mapleader = " "
-let g:airline_theme='deus'
+let g:airline_theme='simple'
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -28,13 +28,14 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
 nnoremap <silent> <leader><space> :w<CR>
-nnoremap <silent> <leader>l :BLines<CR>
-nnoremap <silent> <leader>s :Rg<CR>
 
 autocmd BufWritePre * %s/\s\+$//e
+
+colorscheme gruvbox
 
 set colorcolumn=80
 highlight colorcolumn ctermbg=0 guibg=lightgrey
