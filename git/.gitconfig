@@ -1,12 +1,9 @@
 [include]
 	path = ~/.gitconfig.me
 
-[includeIf "gitdir:~/proj/br/"]	
+[includeIf "gitdir:~/proj/br/"]
 	path = ~/.gitconfig.br
 
-[alias]
-	l = log --all --decorate --abbrev-commit --graph \
-	--format=format:'%C(auto)%h - %d %s %C(reset)%C(dim white) %an (%ar)'
 [core]
 	pager = less -+X -+F -S -R
 	editor = vim

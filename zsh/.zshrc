@@ -21,6 +21,14 @@ alias l="ls -lFh"
 alias la="ls -lAFh"
 alias ..="cd .."
 alias g="git"
+alias gs="git status"
+alias gl="git log --all --decorate --abbrev-commit --graph \
+    --format=format:'%C(auto)%h - %d %s %C(reset)%C(dim white) %an (%ar)'"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gdh="git diff HEAD"
+alias ga="git add"
+alias gc="git commit"
 alias bat="batcat"
 
 # History settings:
