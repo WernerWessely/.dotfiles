@@ -30,6 +30,7 @@ alias gdh="git diff HEAD"
 alias ga="git add"
 alias gc="git commit"
 alias bat="batcat"
+alias v="nvim"
 
 # History settings:
 HISTFILE=~/.zsh_history
