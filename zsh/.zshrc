@@ -29,6 +29,7 @@ alias gds="git diff --staged"
 alias gdh="git diff HEAD"
 alias ga="git add"
 alias gc="git commit"
+alias gp="git push"
 alias bat="batcat"
 alias v="nvim"
 
