@@ -12,6 +12,7 @@ set nobackup
 set incsearch
 set number relativenumber
 set nu rnu
+set nohlsearch
 
 let mapleader = " "
 let g:airline_theme='simple'
@@ -32,6 +33,7 @@ Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
 nnoremap <silent> <leader><space> :w<CR>
+nnoremap <silent> <leader>fe :Files<CR>
 
 autocmd BufWritePre * %s/\s\+$//e
 
