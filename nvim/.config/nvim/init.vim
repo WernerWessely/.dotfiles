@@ -30,10 +30,17 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'gruvbox-community/gruvbox'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 nnoremap <silent> <leader><space> :w<CR>
 nnoremap <silent> <leader>fe :Files<CR>
+nnoremap <silent> <leader>fl :Lines<CR>
+nnoremap <silent> <leader>tt :NERDTreeToggle<CR>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 autocmd BufWritePre * %s/\s\+$//e
 
