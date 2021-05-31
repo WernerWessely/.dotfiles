@@ -32,6 +32,7 @@ alias gc="git commit"
 alias gp="git push"
 alias bat="batcat"
 alias v="nvim"
+alias vim="nvim"
 
 # History settings:
 HISTFILE=~/.zsh_history
