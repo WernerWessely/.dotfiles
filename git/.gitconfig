@@ -6,4 +6,4 @@
 
 [core]
 	pager = less -+X -+F -S -R
-	editor = vim
+	editor = nvim
