@@ -33,6 +33,7 @@ alias gp="git push"
 alias bat="batcat"
 alias v="nvim"
 alias vim="nvim"
+alias dc="docker-compose"
 
 # History settings:
 HISTFILE=~/.zsh_history
