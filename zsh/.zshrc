@@ -48,9 +48,9 @@ function my_bindings() {
 }
 
 # fzf config:
-FZF_CTRL_T_COMMAND="fdfind --type f --hidden --follow --exclude .git"
+FZF_CTRL_T_COMMAND="fd --type f --hidden --follow --exclude .git"
 FZF_CTRL_T_OPTS="--preview 'batcat --style=numbers --color=always --line-range :500 {}'"
-FZF_ALT_C_COMMAND="fdfind --type d --hidden --follow --exclude .git"
+FZF_ALT_C_COMMAND="fd --type d --hidden --follow --exclude .git"
 FZF_ALT_C_OPTS="--preview 'exa --color=always -l {}'"
 
 # Set all key bindings after vi mode init:
