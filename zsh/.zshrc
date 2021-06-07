@@ -49,10 +49,10 @@ function my_bindings() {
 }
 
 # fzf config:
-export FZF_DEFAULT_COMMAND="fdfind --type f --hidden --follow --exclude .git"
+export FZF_DEFAULT_COMMAND="fdfind --type f --hidden --follow --no-ignore-vcs --exclude .git"
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_CTRL_T_OPTS="--preview 'batcat --style=numbers --color=always --line-range :500 {}'"
-export FZF_ALT_C_COMMAND="fdfind --type d --hidden --follow --exclude .git"
+export FZF_ALT_C_COMMAND="fdfind --type d --hidden --follow --no-ignore-vcs --exclude .git"
 export FZF_ALT_C_OPTS="--preview 'exa --color=always -l {}'"
 
 # Set all key bindings after vi mode init:
