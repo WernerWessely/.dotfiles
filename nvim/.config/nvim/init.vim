@@ -13,6 +13,7 @@ set incsearch
 set number relativenumber
 set nu rnu
 set nohlsearch
+set mouse=a
 
 let mapleader = " "
 let g:airline_theme='simple'
@@ -36,7 +37,10 @@ call plug#end()
 
 nnoremap <silent> <leader><space> :w<CR>
 nnoremap <silent> <leader>fe :Files<CR>
+nnoremap <silent> <leader>fh :Files ~<CR>
 nnoremap <silent> <leader>fl :Lines<CR>
+nnoremap <silent> <leader>fb :Buffers<CR>
+nnoremap <silent> <leader>bd :bd<CR>
 nnoremap <silent> <leader>tt :NERDTreeToggle<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
