@@ -17,6 +17,7 @@ set mouse=a
 
 let mapleader = " "
 let g:airline_theme='simple'
+let g:deoplete#enable_at_startup = 1
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -33,6 +34,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'gruvbox-community/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ervandew/supertab'
 call plug#end()
 
 nnoremap <silent> <leader><space> :w<CR>
@@ -40,6 +43,7 @@ nnoremap <silent> <leader>fe :Files<CR>
 nnoremap <silent> <leader>fh :Files ~<CR>
 nnoremap <silent> <leader>fl :Lines<CR>
 nnoremap <silent> <leader>fb :Buffers<CR>
+nnoremap <silent> <leader>fs :Rg<CR>
 nnoremap <silent> <leader>bd :bd<CR>
 nnoremap <silent> <leader>tt :NERDTreeToggle<CR>
 nnoremap <C-J> <C-W><C-J>
