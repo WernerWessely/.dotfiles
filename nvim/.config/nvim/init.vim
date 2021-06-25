@@ -45,6 +45,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
 Plug 'brooth/far.vim'
 Plug 'airblade/vim-rooter'
+Plug 'tpope/vim-capslock'
+Plug 'wellle/targets.vim'
 call plug#end()
 
 " All kinds of ops:
