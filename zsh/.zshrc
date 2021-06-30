@@ -34,6 +34,8 @@ alias gp="git push"
 alias bat="batcat"
 alias v="nvim"
 alias vim="nvim"
+alias e="emacs -nw"
+alias eg="emacs &!"
 alias dc="docker-compose"
 
 # History settings:
