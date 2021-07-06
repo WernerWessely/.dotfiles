@@ -15,9 +15,10 @@ set nu rnu
 set nohlsearch
 set mouse=a
 set hidden
+set termguicolors
 
 let mapleader = " "
-let g:airline_theme='simple'
+let g:airline_theme='nord'
 let g:airline#extensions#tabline#enabled = 1
 let g:deoplete#enable_at_startup = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
@@ -38,7 +39,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'gruvbox-community/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 Plug 'preservim/nerdtree'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -57,7 +58,7 @@ nnoremap <silent> <leader>pf :Rooter <bar> :Files<CR>
 " Fuzzy edit in ~:
 nnoremap <silent> <leader>ff :Files ~<CR>
 " Fuzzy find line:
-nnoremap <silent> <leader>fl :Lines<CR>
+nnoremap <silent> <leader>sb :Lines<CR>
 " Fuzzy switch to buffer:
 nnoremap <silent> <leader>fb :Buffers<CR>
 " Fuzzy search in project:
@@ -85,7 +86,6 @@ nnoremap <C-H> <C-W><C-H>
 
 autocmd BufWritePre * %s/\s\+$//e
 
-colorscheme gruvbox
+colorscheme nord
 
 set colorcolumn=80
-highlight colorcolumn ctermbg=0 guibg=lightgrey
