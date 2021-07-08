@@ -1,0 +1,10 @@
+set relativenumber
+set number
+
+let mapleader = " "
+
+" All kinds of ops (from nvim):
+" Write buffer:
+nnoremap <silent> <leader>fs :w<CR>
+" Edit nvim config:
+nnoremap <silent> <leader>fP :e ~/.ideavimrc<CR>
