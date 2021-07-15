@@ -17,12 +17,12 @@ set mouse=a
 set hidden
 set termguicolors
 
-set wildmode=longest:full,full
-set wildmenu
-
 let mapleader = " "
 let g:airline_theme='nord'
 let g:airline#extensions#tabline#enabled = 1
+let g:deoplete#enable_at_startup = 1
+let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:far#enable_undo=1
 let g:rooter_manual_only = 1
 let g:rooter_patterns = ['.git']
 let g:rooter_change_directory_for_non_project_files = 'current'
@@ -35,65 +35,48 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-
-" Airline:
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Nord theme:
 Plug 'arcticicestudio/nord-vim'
-
-" Nerdtree:
 Plug 'preservim/nerdtree'
-
-" Markdown:
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-
-" Rooter, finds root of project:
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ervandew/supertab'
+Plug 'brooth/far.vim'
 Plug 'airblade/vim-rooter'
-
-" Targets, lets you edit faster inside of stuff:
+Plug 'tpope/vim-capslock'
 Plug 'wellle/targets.vim'
-
-" Telescopic Johnson:
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
-
 call plug#end()
-
-" TJ config:
-lua require('telescope')
 
 " All kinds of ops:
 " Write buffer:
-nnoremap <silent> <leader><leader> :w<CR>
+nnoremap <silent> <leader>fs :w<CR>
+" Fuzzy edit in project:
+nnoremap <silent> <leader>pf :Rooter <bar> :Files<CR>
+" Fuzzy edit in ~:
+nnoremap <silent> <leader>ff :Files ~<CR>
+" Fuzzy find line:
+nnoremap <silent> <leader>sb :Lines<CR>
+" Fuzzy switch to buffer:
+nnoremap <silent> <leader>fb :Buffers<CR>
+" Fuzzy search in project:
+nnoremap <silent> <leader>sp :Rooter <bar> :Rg<CR>
 " Buffer delete:
 nnoremap <silent> <leader>bd :bd<CR>
+" Far replace:
+nnoremap <silent> <leader>rr :Farr<CR>
+" Far find:
+nnoremap <silent> <leader>rf :Farf<CR>
 " Toggle nerdtree:
 nnoremap <silent> <leader>op :NERDTreeToggle<CR>
 " Edit nvim config:
-nnoremap <silent> <leader>ve :e ~/.config/nvim/init.vim<CR>
-nnoremap <silent> <leader>vs :so ~/.config/nvim/init.vim<CR>
+nnoremap <silent> <leader>fP :e ~/.config/nvim/init.vim<CR>
 " Next buffer:
 nnoremap <C-N> :bnext<CR>
 " Prev buffer:
 nnoremap <C-P> :bprev<CR>
-
-" ...
-nnoremap <Leader>fp :Rooter <bar> :lua require('telescope.builtin').find_files({find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
-nnoremap <leader>gp :lua require('telescope.builtin').live_grep()<CR>
-
-nnoremap <leader>pw :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
-nnoremap <leader>pb :lua require('telescope.builtin').buffers()<CR>
-nnoremap <leader>vh :lua require('telescope.builtin').help_tags()<CR>
-nnoremap <leader>vrc :lua require('theprimeagen.telescope').search_dotfiles()<CR>
-nnoremap <leader>va :lua require('theprimeagen.telescope').anime_selector()<CR>
-nnoremap <leader>vc :lua require('theprimeagen.telescope').chat_selector()<CR>
-nnoremap <leader>gc :lua require('theprimeagen.telescope').git_branches()<CR>
-nnoremap <leader>gw :lua require('telescope').extensions.git_worktree.git_worktrees()<CR>
-nnoremap <leader>gm :lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>
 
 " Windows movements:
 nnoremap <C-J> <C-W><C-J>
