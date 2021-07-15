@@ -44,7 +44,6 @@ Plug 'preservim/nerdtree'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
-Plug 'brooth/far.vim'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-capslock'
 Plug 'wellle/targets.vim'
@@ -52,27 +51,25 @@ call plug#end()
 
 " All kinds of ops:
 " Write buffer:
-nnoremap <silent> <leader>fs :w<CR>
+nnoremap <silent> <leader><leader> :w<CR>
 " Fuzzy edit in project:
 nnoremap <silent> <leader>pf :Rooter <bar> :Files<CR>
 " Fuzzy edit in ~:
 nnoremap <silent> <leader>ff :Files ~<CR>
 " Fuzzy find line:
-nnoremap <silent> <leader>sb :Lines<CR>
+nnoremap <silent> <leader>fl:Lines<CR>
 " Fuzzy switch to buffer:
-nnoremap <silent> <leader>fb :Buffers<CR>
+nnoremap <silent> <leader>bb :Buffers<CR>
 " Fuzzy search in project:
 nnoremap <silent> <leader>sp :Rooter <bar> :Rg<CR>
 " Buffer delete:
 nnoremap <silent> <leader>bd :bd<CR>
-" Far replace:
-nnoremap <silent> <leader>rr :Farr<CR>
-" Far find:
-nnoremap <silent> <leader>rf :Farf<CR>
 " Toggle nerdtree:
 nnoremap <silent> <leader>op :NERDTreeToggle<CR>
 " Edit nvim config:
-nnoremap <silent> <leader>fP :e ~/.config/nvim/init.vim<CR>
+nnoremap <silent> <leader>ve :e ~/.config/nvim/init.vim<CR>
+" Source nvim config:
+nnoremap <silent> <leader>vs :so ~/.config/nvim/init.vim<CR>
 " Next buffer:
 nnoremap <C-N> :bnext<CR>
 " Prev buffer:
