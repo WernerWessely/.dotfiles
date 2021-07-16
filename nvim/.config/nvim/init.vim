@@ -1,7 +1,5 @@
 
 " TODO:
-" - Add auto brackets
-" - Add leave space at top/bottom
 " - Add editable fix list
 
 syntax on
@@ -21,6 +19,7 @@ set nu rnu
 set nohlsearch
 set mouse=a
 set hidden
+set scrolloff=5
 set termguicolors
 
 let mapleader = " "
@@ -52,6 +51,8 @@ Plug 'ervandew/supertab'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-capslock'
 Plug 'wellle/targets.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'folke/which-key.nvim'
 call plug#end()
 
 " All kinds of ops:
@@ -85,6 +86,11 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Setup which-key:
+lua << EOF
+  require("which-key").setup {}
+EOF
 
 autocmd BufWritePre * %s/\s\+$//e
 
