@@ -37,7 +37,7 @@ alias vim="nvim"
 alias e="emacs -nw"
 alias eg="emacs &!"
 alias dc="docker-compose"
-alias cdp="cd $(git rev-parse --show-toplevel)"
+alias cdp='cd $(git rev-parse --show-toplevel)'
 
 # History settings:
 HISTFILE=~/.zsh_history
