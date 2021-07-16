@@ -49,6 +49,7 @@ eval "$(starship init zsh)"
 
 function my_bindings() {
     bindkey '^F' fzf-cd-widget
+    bindkey '^[[Z' autosuggest-accept
 }
 
 # fzf config:
