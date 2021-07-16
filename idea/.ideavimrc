@@ -5,6 +5,8 @@ let mapleader = " "
 
 " All kinds of ops (from nvim):
 " Write buffer:
-nnoremap <silent> <leader>fs :w<CR>
+nnoremap <silent> <leader><leader> :w<CR>
+" Close buffer:
+nnoremap <silent> <leader>bd :q<CR>
 " Edit nvim config:
-nnoremap <silent> <leader>fP :e ~/.ideavimrc<CR>
+nnoremap <silent> <leader>ve :e ~/.ideavimrc<CR>
