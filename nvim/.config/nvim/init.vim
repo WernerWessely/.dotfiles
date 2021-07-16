@@ -1,3 +1,9 @@
+
+" TODO:
+" - Add auto brackets
+" - Add leave space at top/bottom
+" - Add editable fix list
+
 syntax on
 set noerrorbells
 set tabstop=4 softtabstop=4
@@ -22,7 +28,6 @@ let g:airline_theme='nord'
 let g:airline#extensions#tabline#enabled = 1
 let g:deoplete#enable_at_startup = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
-let g:far#enable_undo=1
 let g:rooter_manual_only = 1
 let g:rooter_patterns = ['.git']
 let g:rooter_change_directory_for_non_project_files = 'current'
@@ -44,7 +49,6 @@ Plug 'preservim/nerdtree'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
-Plug 'brooth/far.vim'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-capslock'
 Plug 'wellle/targets.vim'
@@ -52,27 +56,25 @@ call plug#end()
 
 " All kinds of ops:
 " Write buffer:
-nnoremap <silent> <leader>fs :w<CR>
+nnoremap <silent> <leader><leader>  :w<CR>
 " Fuzzy edit in project:
-nnoremap <silent> <leader>pf :Rooter <bar> :Files<CR>
+nnoremap <silent> <leader>fp :Rooter <bar> :Files<CR>
 " Fuzzy edit in ~:
 nnoremap <silent> <leader>ff :Files ~<CR>
 " Fuzzy find line:
-nnoremap <silent> <leader>sb :Lines<CR>
+nnoremap <silent> <leader>fl :Lines<CR>
 " Fuzzy switch to buffer:
 nnoremap <silent> <leader>fb :Buffers<CR>
 " Fuzzy search in project:
 nnoremap <silent> <leader>sp :Rooter <bar> :Rg<CR>
 " Buffer delete:
 nnoremap <silent> <leader>bd :bd<CR>
-" Far replace:
-nnoremap <silent> <leader>rr :Farr<CR>
-" Far find:
-nnoremap <silent> <leader>rf :Farf<CR>
 " Toggle nerdtree:
 nnoremap <silent> <leader>op :NERDTreeToggle<CR>
 " Edit nvim config:
-nnoremap <silent> <leader>fP :e ~/.config/nvim/init.vim<CR>
+nnoremap <silent> <leader>ve :e ~/.config/nvim/init.vim<CR>
+" Source nvim config:
+nnoremap <silent> <leader>vs :so ~/.config/nvim/init.vim<CR>
 " Next buffer:
 nnoremap <C-N> :bnext<CR>
 " Prev buffer:
