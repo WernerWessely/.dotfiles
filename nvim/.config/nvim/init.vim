@@ -23,6 +23,8 @@ set scrolloff=5
 set termguicolors
 " For compe:
 set completeopt=menuone,noselect
+" For which-key:
+set timeoutlen=600
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = " "
