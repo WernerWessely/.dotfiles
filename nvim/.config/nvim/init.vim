@@ -21,16 +21,18 @@ set mouse=a
 set hidden
 set scrolloff=5
 set termguicolors
+" For compe:
+set completeopt=menuone,noselect
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = " "
 let g:airline_theme='nord'
 let g:airline#extensions#tabline#enabled = 1
-let g:deoplete#enable_at_startup = 1
-let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:rooter_manual_only = 1
 let g:rooter_patterns = ['.git']
 let g:rooter_change_directory_for_non_project_files = 'current'
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs
@@ -46,15 +48,14 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
 Plug 'preservim/nerdtree'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'ervandew/supertab'
 Plug 'airblade/vim-rooter'
-Plug 'tpope/vim-capslock'
 Plug 'wellle/targets.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'folke/which-key.nvim'
+Plug 'hrsh7th/nvim-compe'
 call plug#end()
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " All kinds of ops:
 " Write buffer:
 nnoremap <silent> <leader><leader>  :w<CR>
@@ -87,11 +88,52 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Setup fzf:
+" Make sure we fuzzy search hidden files as well:
+command! -bang -nargs=* Rg call fzf#vim#grep(
+    \ 'rg --column --line-number --no-heading --color=always --smart-case
+    \ --hidden -g "!.git" -- '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup which-key:
 lua << EOF
   require("which-key").setup {}
 EOF
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Setup Compe:
+let g:compe = {}
+let g:compe.enabled = v:true
+let g:compe.autocomplete = v:true
+let g:compe.debug = v:false
+let g:compe.min_length = 1
+let g:compe.preselect = 'always'
+let g:compe.throttle_time = 80
+let g:compe.source_timeout = 200
+let g:compe.resolve_timeout = 800
+let g:compe.incomplete_delay = 400
+let g:compe.max_abbr_width = 100
+let g:compe.max_kind_width = 100
+let g:compe.max_menu_width = 100
+let g:compe.documentation = v:true
+
+let g:compe.source = {}
+let g:compe.source.path = v:true
+let g:compe.source.buffer = v:true
+let g:compe.source.calc = v:true
+let g:compe.source.nvim_lsp = v:true
+let g:compe.source.nvim_lua = v:true
+
+inoremap <silent><expr> <C-Space>   compe#complete()
+inoremap <silent><expr> <Tab>       compe#confirm('<Tab>')
+
+" Automatically select first match:
+lua << EOF
+    vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm({ 'keys': '<CR>', 'select': v:true })", { expr = true })
+EOF
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufWritePre * %s/\s\+$//e
 
 colorscheme nord
