@@ -71,7 +71,7 @@ nnoremap <silent> <leader>sp :Rooter <bar> :Rg<CR>
 " Buffer delete:
 nnoremap <silent> <leader>bd :bd<CR>
 " Toggle nerdtree:
-nnoremap <silent> <leader>op :NERDTreeToggle<CR>
+nnoremap <silent> <leader>tt :NERDTreeToggle<CR>
 " Edit nvim config:
 nnoremap <silent> <leader>ve :e ~/.config/nvim/init.vim<CR>
 " Source nvim config:
