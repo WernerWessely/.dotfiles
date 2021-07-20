@@ -19,7 +19,7 @@ set nu rnu
 set nohlsearch
 set mouse=a
 set hidden
-set scrolloff=999
+set scrolloff=5
 set termguicolors
 " For compe:
 set completeopt=menuone,noselect
