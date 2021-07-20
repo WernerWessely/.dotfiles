@@ -19,7 +19,7 @@ set nu rnu
 set nohlsearch
 set mouse=a
 set hidden
-set scrolloff=5
+set scrolloff=999
 set termguicolors
 " For compe:
 set completeopt=menuone,noselect
@@ -55,6 +55,7 @@ Plug 'wellle/targets.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'folke/which-key.nvim'
 Plug 'hrsh7th/nvim-compe'
+Plug 'phaazon/hop.nvim'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -136,6 +137,14 @@ lua << EOF
 EOF
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Setup hop:
+lua << EOF
+    require("hop").setup()
+EOF
+
+nnoremap <silent> s :HopChar2 <CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufWritePre * %s/\s\+$//e
 
 colorscheme nord
