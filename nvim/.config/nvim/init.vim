@@ -56,6 +56,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'folke/which-key.nvim'
 Plug 'hrsh7th/nvim-compe'
 Plug 'phaazon/hop.nvim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
