@@ -58,6 +58,7 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'phaazon/hop.nvim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -136,6 +137,13 @@ inoremap <silent><expr> <Tab>       compe#confirm('<Tab>')
 " Automatically select first match:
 lua << EOF
     vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm({ 'keys': '<CR>', 'select': v:true })", { expr = true })
+EOF
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Setup lsp:
+lua << EOF
+    require'lspconfig'.pyright.setup{}
+    require'lspconfig'.clangd.setup{}
 EOF
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
