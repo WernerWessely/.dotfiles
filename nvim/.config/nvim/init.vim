@@ -144,7 +144,8 @@ lua << EOF
     require("hop").setup()
 EOF
 
-nnoremap <silent> s :HopChar2 <CR>
+nnoremap <silent> s :HopChar1 <CR>
+nnoremap <silent> <S-S> :HopChar2 <CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufWritePre * %s/\s\+$//e
