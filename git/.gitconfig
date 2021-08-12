@@ -8,3 +8,4 @@
 	pager = less -+X -+F -S -R
 	editor = nvim
 	autocrlf = input
+	fileMode = false
