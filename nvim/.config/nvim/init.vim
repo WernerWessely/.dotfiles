@@ -95,6 +95,32 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Keep visual mode after indent:
+:vnoremap < <gv
+:vnoremap > >gv
+
+" Make Y behave like the rest of the capital letters:
+nnoremap Y yg_
+
+" Keeping the shit centered:
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Add some undo breakpoints to not always undo so much:
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
+" Record jump point before doing relative jumps:
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+
+" Mode text in visual mode
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup fzf:
 " Make sure we fuzzy search hidden files as well:
