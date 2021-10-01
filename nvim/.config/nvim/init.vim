@@ -88,6 +88,10 @@ nnoremap <silent> <leader>vs :so ~/.config/nvim/init.vim<CR>
 nnoremap <C-N> :bnext<CR>
 " Prev buffer:
 nnoremap <C-P> :bprev<CR>
+" Quit all no write:
+nnoremap <silent> <leader>q :qa!<CR>
+" Quit all write:
+nnoremap <silent> <leader>a :wqa<CR>
 
 " Windows movements:
 nnoremap <C-J> <C-W><C-J>
