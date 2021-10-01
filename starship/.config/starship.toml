@@ -1,6 +1,8 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
+command_timeout = 10000
+
 [character]
 success_symbol = "[➜](bold green)"
 error_symbol = "[✗](bold red)"
