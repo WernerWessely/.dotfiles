@@ -10,7 +10,15 @@
 # - PSFzf (and fzf)
 
 Import-Module PSReadline
+Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadlineKeyHandler -Key Tab -Function Complete
+Set-PSReadlineKeyHandler -Key Shift+Tab -Function AcceptSuggestion
+
 Import-Module PSFzf
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t'
+Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
+Set-PsFzfOption -PSReadlineChordSetLocation 'Ctrl+f'
 
 function powershell {
     pwsh -NoLogo
@@ -92,13 +100,5 @@ Remove-Alias dc -Force -ErrorAction SilentlyContinue
 function dc {
     docker-compose $args
 }
-
-Set-PSReadLineOption -PredictionSource History
-Set-PSReadlineKeyHandler -Key Tab -Function Complete
-Set-PSReadlineKeyHandler -Key Shift+Tab -Function AcceptSuggestion
-
-Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t'
-Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
-Set-PsFzfOption -PSReadlineChordSetLocation 'Ctrl+f'
 
 Invoke-Expression (&starship init powershell)
