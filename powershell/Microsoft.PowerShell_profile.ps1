@@ -16,7 +16,7 @@ function powershell {
     pwsh -NoLogo
 }
 
-Remove-Alias rm -ErrorAction SilentlyContinue
+Remove-Alias rmrf -ErrorAction SilentlyContinue
 function rmrf {
     Remove-Item -Recurse -Force $args
 }
