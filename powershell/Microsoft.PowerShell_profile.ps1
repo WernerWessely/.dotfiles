@@ -21,11 +21,6 @@ function rmrf {
     Remove-Item -Recurse -Force $args
 }
 
-Remove-Alias h -Force -ErrorAction SilentlyContinue
-function h {
-    cd ~
-}
-
 function .. {
     cd ..
 }
