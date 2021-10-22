@@ -41,6 +41,8 @@ alias vim="nvim"
 alias e="emacs -nw"
 alias eg="emacs &!"
 alias dc="docker-compose"
+alias kc="kubectl"
+alias mk="minikube"
 alias cdp='cd $(git rev-parse --show-toplevel)'
 
 # History settings:
@@ -67,4 +69,7 @@ export FZF_ALT_C_OPTS="--preview 'exa --color=always -l {}'"
 # Set all key bindings after vi mode init:
 zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')
 zvm_after_init_commands+=(my_bindings)
+
+# Add go to path:
+export PATH=$PATH:/usr/local/go/bin
 
