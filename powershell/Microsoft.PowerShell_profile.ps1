@@ -82,8 +82,12 @@ function gp {
 }
 
 Remove-Alias gb -Force -ErrorAction SilentlyContinue
-function gb {
-    git branch $args
+function gbc {
+    git switch -c $args
+}
+
+function gbs {
+    git switch $args
 }
 
 Remove-Alias gbd -Force -ErrorAction SilentlyContinue
