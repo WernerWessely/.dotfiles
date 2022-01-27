@@ -21,6 +21,7 @@ set mouse=a
 set hidden
 set scrolloff=5
 set termguicolors
+set cursorline
 " For compe:
 set completeopt=menuone,noselect
 " For which-key:
@@ -59,7 +60,7 @@ Plug 'phaazon/hop.nvim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'neovim/nvim-lspconfig'
-Plug 'kabouzeid/nvim-lspinstall'
+" Plug 'kabouzeid/nvim-lspinstall'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -172,23 +173,23 @@ EOF
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup lsp:
-lua << EOF
-local function setup_servers()
-    require'lspinstall'.setup()
-    local servers = require'lspinstall'.installed_servers()
-    for _, server in pairs(servers) do
-        require'lspconfig'[server].setup{}
-    end
-end
-
-setup_servers()
-
--- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
-require'lspinstall'.post_install_hook = function ()
-    setup_servers() -- reload installed servers
-    vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
-end
-EOF
+" lua << EOF
+" local function setup_servers()
+"     require'lspinstall'.setup()
+"     local servers = require'lspinstall'.installed_servers()
+"     for _, server in pairs(servers) do
+"         require'lspconfig'[server].setup{}
+"     end
+" end
+"
+" setup_servers()
+"
+" -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
+" require'lspinstall'.post_install_hook = function ()
+"     setup_servers() -- reload installed servers
+"     vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
+" end
+" EOF
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup hop:
