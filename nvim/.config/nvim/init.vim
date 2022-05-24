@@ -126,6 +126,12 @@ nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+" Copy pasting with the * reg:
+vmap <leader>x "*dgv
+vmap <leader>c "*ygv
+vmap <leader>v "_d"*P
+nnoremap <silent> <leader>v "*P
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup fzf:
 " Make sure we fuzzy search hidden files as well:
