@@ -22,3 +22,6 @@ disabled = true
 
 [cmd_duration]
 disabled = true
+
+[battery]
+disabled=true
