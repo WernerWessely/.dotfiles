@@ -74,3 +74,5 @@ zvm_after_init_commands+=(my_bindings)
 # Add go to path:
 export PATH=$PATH:/usr/local/go/bin
 
+# Add bob-managed neovim to path:
+export PATH=$PATH:~/.local/share/neovim/bin
