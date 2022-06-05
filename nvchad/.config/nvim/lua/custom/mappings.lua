@@ -24,6 +24,8 @@ M.general = {
     ["n"] = { "nzzzv", "n   find next centered" },
     ["N"] = { "Nzzzv", "N   find previous centered" },
     ["J"] = { "mzJ`z", "J   bring up next line centerd" },
+
+    ["s"] = { "<cmd> HopPattern <CR>", "s   hop to word", opts = { noremap = true, silent = true } },
   },
 
   i = {
