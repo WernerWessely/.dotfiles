@@ -25,7 +25,7 @@ M.general = {
     ["N"] = { "Nzzzv", "N   find previous centered" },
     ["J"] = { "mzJ`z", "J   bring up next line centerd" },
 
-    ["s"] = { "<cmd> HopPattern <CR>", "s   hop to word", opts = { noremap = true, silent = true } },
+    ["s"] = { "<cmd> Pounce <CR>", "s   pounce to word", opts = { noremap = true, silent = true } },
   },
 
   i = {
@@ -40,6 +40,8 @@ M.general = {
     -- keep visual mode after indent
     ["<"] = { "<gv", "<   visual detent" },
     [">"] = { ">gv", ">   visual indent" },
+
+    ["s"] = { "<cmd> Pounce <CR>", "s   pounce to word", opts = { noremap = true, silent = true } },
   }
 }
 
