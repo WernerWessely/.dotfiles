@@ -36,8 +36,8 @@ alias gbs="git switch"
 alias gbd="git branch -D"
 alias gbm="git branch -M"
 alias bat="batcat"
-alias v="nvim \"+Files\""
-alias vh="nvim \"+cd ~\" \"+Files\""
+alias v="nvim \"+Telescope find_files hidden=true\""
+alias vh="nvim \"+cd ~\" \"+Telescope find_files hidden=true\""
 alias vim="nvim"
 alias e="emacs -nw"
 alias eg="emacs &!"
@@ -72,7 +72,7 @@ zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')
 zvm_after_init_commands+=(my_bindings)
 
 # Add go to path:
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:~/go/bin
 
 # Add bob-managed neovim to path:
 export PATH=$PATH:~/.local/share/neovim/bin

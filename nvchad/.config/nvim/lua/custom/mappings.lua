@@ -3,6 +3,7 @@ local M = {}
 M.disabled = {
 	-- Disabled or overwritten:
 	["<C-n>"] = "",
+	["<leader>pt"] = "",
 }
 
 M.general = {
@@ -29,9 +30,21 @@ M.general = {
 		["s"] = { "<cmd> Pounce <CR>", "s   pounce to word", opts = { noremap = true, silent = true } },
 		["S"] = {
 			"<cmd> PounceRepeat <CR>",
-			"s   pounce previod to word",
+			"s   pounce previous to word",
 			opts = { noremap = true, silent = true },
 		},
+
+		-- some telescoping
+		["<leader>fp"] = {
+			"<cmd> Telescope find_files cwd=~/proj <CR>",
+			"   find files in home",
+		},
+		["<leader>fc"] = { "<cmd> Telescope commands <CR>", "   find command" },
+		["<leader>sb"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "   search in current buffer" },
+		["<leader>sp"] = { "<cmd> Telescope live_grep <CR>", "   search in current project" },
+
+		-- copypasting with system clipboard:
+		["<leader>y"] = { '"*y', "   ", opts = { noremap = true } },
 	},
 
 	i = {
@@ -54,6 +67,9 @@ M.general = {
 			"s   pounce previod to word",
 			opts = { noremap = true, silent = true },
 		},
+
+		-- copypasting with system clipboard:
+		["<leader>y"] = { '"*y', "   search in current project", opts = { noremap = true } },
 	},
 }
 
