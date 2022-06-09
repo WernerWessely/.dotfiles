@@ -10,16 +10,16 @@ M.general = {
 
 	n = {
 		-- write buffer
-		["<leader><leader>"] = { "<cmd> w <CR>", "   write buffer" },
+		["<leader><leader>"] = { "<cmd> w <CR>", "   write buffer" },
 
 		-- quit with saving
-		["<leader>a"] = { "<cmd> wqa <CR>", "   quit without saving" },
+		["<leader>a"] = { "<cmd> wqa <CR>", "   quit without saving" },
 
 		-- quit without saving
-		["<leader>q"] = { "<cmd> qa! <CR>", "   quit without saving" },
+		["<leader>q"] = { "<cmd> qa! <CR>", "   quit without saving" },
 
 		-- make Y behave like other capitals
-		["Y"] = { "yg_", "Y   yank to end of line" },
+		["Y"] = { "yg_", "   yank to end of line" },
 
 		-- keeping the shit centered
 		["n"] = { "nzzzv", "n   find next centered" },
@@ -27,10 +27,10 @@ M.general = {
 		["J"] = { "mzJ`z", "J   bring up next line centerd" },
 
 		-- pounce for normal mode
-		["s"] = { "<cmd> Pounce <CR>", "s   pounce to word", opts = { noremap = true, silent = true } },
+		["s"] = { "<cmd> Pounce <CR>", "   pounce to word", opts = { noremap = true, silent = true } },
 		["S"] = {
 			"<cmd> PounceRepeat <CR>",
-			"s   pounce previous to word",
+			"   pounce previous to word",
 			opts = { noremap = true, silent = true },
 		},
 
@@ -44,7 +44,11 @@ M.general = {
 		["<leader>sp"] = { "<cmd> Telescope live_grep <CR>", "   search in current project" },
 
 		-- copypasting with system clipboard:
-		["<leader>y"] = { '"*y', "   ", opts = { noremap = true } },
+		["<leader>y"] = { '"*y', "   yank to system clipboard", opts = { noremap = true } },
+		["<leader>Y"] = { '"*yg_', "   yank to system clipboard", opts = { noremap = true } },
+		["<leader>yy"] = { '"*yy', "   yank to system clipboard", opts = { noremap = true } },
+		["<leader>p"] = { '"*p', "   paste from system clipboard", opts = { noremap = true } },
+		["<leader>P"] = { '"*P', "   paste from system clipboard", opts = { noremap = true } },
 	},
 
 	i = {
@@ -69,7 +73,9 @@ M.general = {
 		},
 
 		-- copypasting with system clipboard:
-		["<leader>y"] = { '"*y', "   search in current project", opts = { noremap = true } },
+		["<leader>y"] = { '"*y', "   yank to system clipboard", opts = { noremap = true } },
+		["<leader>p"] = { '"_d"*p', "   paste from system clipboard", opts = { noremap = true } },
+		["<leader>P"] = { '"_d"*P', "   paste from system clipboard", opts = { noremap = true } },
 	},
 }
 
