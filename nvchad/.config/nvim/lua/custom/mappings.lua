@@ -41,7 +41,17 @@ M.general = {
 		},
 		["<leader>fc"] = { "<cmd> Telescope commands <CR>", "   find command" },
 		["<leader>sb"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "   search in current buffer" },
-		["<leader>sp"] = { "<cmd> Telescope live_grep <CR>", "   search in current project" },
+		["<leader>sp"] = {
+			function()
+				require("telescope.builtin").live_grep({
+					additional_args = function(_)
+						return { "--no-ignore-vcs", "--hidden", "--follow", "--smart-case", "-g", "!.git" }
+					end,
+				})
+			end,
+
+			"   search in current project",
+		},
 
 		-- copypasting with system clipboard:
 		["<leader>y"] = { '"*y', "   yank to system clipboard", opts = { noremap = true } },
