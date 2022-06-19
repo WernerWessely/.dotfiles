@@ -21,10 +21,6 @@ M.plugins = {
 		lspconfig = {
 			setup_lspconf = "custom.plugins.lspconfig",
 		},
-
-		statusline = {
-			separator_style = "round",
-		},
 	},
 
 	override = {
@@ -67,9 +63,15 @@ M.plugins = {
 M.ui = {
 	-- set the nord theme
 	theme = "nord",
+
 	-- enable the cursor line
 	hl_override = {
 		CursorLine = { bg = "one_bg" },
+	},
+
+	-- set status line separator to round
+	statusline = {
+		separator_style = "round",
 	},
 }
 
