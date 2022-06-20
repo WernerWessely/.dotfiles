@@ -28,7 +28,7 @@ M.plugins = {
 	},
 
 	override = {
-	    -- enable git in tree
+		-- enable git in tree
 		["kyazdani42/nvim-tree.lua"] = {
 			renderer = {
 				icons = {
@@ -45,7 +45,18 @@ M.plugins = {
 
 		-- add some extensions to telescope
 		["nvim-telescope/telescope.nvim"] = {
-			extensions_list = { "themes", "terms", "projects" },
+			extensions_list = { "themes", "terms", "projects", "project", "file_browser" },
+			extensions = {
+				project = {
+					base_dirs = {
+						{ "~/proj/me", max_depth = 2 },
+						{ "~/proj/br", max_depth = 2 },
+						{ "~", max_depth = 2 },
+						{ "~/.config", max_depth = 8 },
+					},
+					hidden_files = true,
+				},
+			},
 		},
 	},
 
