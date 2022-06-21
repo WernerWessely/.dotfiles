@@ -9,3 +9,5 @@ To create links:
     # Or to restow:
 
     stow -nvRt ~ conky
+
+And on windows use dploy stow ...
