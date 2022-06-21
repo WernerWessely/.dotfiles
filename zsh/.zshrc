@@ -76,3 +76,6 @@ export PATH=$PATH:/usr/local/go/bin:~/go/bin
 
 # Add bob-managed neovim to path:
 export PATH=$PATH:~/.local/share/neovim/bin
+
+# Add ~/.local/bin to path just in case:
+export PATH=$PATH:~/.local/bin
