@@ -1,6 +1,15 @@
 -- TODO:
---  - Add fuzzy search in project
---  - Add git integration
+-- - Add shade
+-- - Add lightbulb
+-- - Add twilight
+-- - Add trouble
+-- - Add lsp_signature
+-- - Add navigator
+-- - Add treesitter-textsubjects
+-- - Add nvim-neoclip.lua
+-- - Add cheatsheet.nvim
+-- - Add fuzzy search in project
+-- - Add git integration
 
 local M = {}
 
