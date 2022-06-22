@@ -1,8 +1,8 @@
 [include]
-	path = ~/.gitconfig.me
+	path = ~/.dotfiles/git/.gitconfig.me
 
 [includeIf "gitdir:~/proj/br/"]
-	path = ~/.gitconfig.br
+	path = ~/.dotfiles/git/.gitconfig.br
 
 [core]
 	pager = less -+X -+F -S -R
