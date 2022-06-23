@@ -1,6 +1,5 @@
 -- TODO:
 -- - Add shade
--- - Add lightbulb
 -- - Add twilight
 -- - Add trouble
 -- - Add lsp_signature
