@@ -36,11 +36,11 @@ M.general = {
 
 		-- some telescoping
 		["<leader>fp"] = {
-			"<cmd> Telescope find_files cwd=~/proj <CR>",
+			"<cmd> Files ~/proj<CR>",
 			"   find files in ~/proj",
 		},
 		["<leader>fc"] = { "<cmd> Telescope commands <CR>", "   find command" },
-		["<leader>sb"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "   search in current buffer" },
+		["<leader>sb"] = { "<cmd> BLines <CR>", "   search in current buffer" },
 		["<leader>sp"] = {
 			function()
 				require("telescope.builtin").live_grep({

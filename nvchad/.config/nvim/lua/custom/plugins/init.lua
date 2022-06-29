@@ -53,4 +53,8 @@ return {
 			require("nvim-lightbulb").setup({ autocmd = { enabled = true } })
 		end,
 	},
+
+	-- add fzf
+	["junegunn/fzf"] = { run = "./install --bin" },
+	["junegunn/fzf.vim"] = {},
 }
