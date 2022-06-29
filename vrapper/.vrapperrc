@@ -1,0 +1,29 @@
+set scrolloff=5
+set incsearch
+set ignorecase
+set smartcase
+
+let mapleader = " "
+
+nnoremap <silent> <leader><leader>  :w<CR>
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
+nnoremap <silent> <leader>q :qa!<CR>
+nnoremap <silent> <leader>a :wqa<CR>
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Keep visual mode after indent:
+:vnoremap < <gv
+:vnoremap > >gv
+
+" Make Y behave like the rest of the capital letters:
+nnoremap Y yg_
+
+" Keeping the shit centered:
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
