@@ -57,4 +57,6 @@ return {
 	-- add fzf
 	["junegunn/fzf"] = { run = "./install --bin" },
 	["junegunn/fzf.vim"] = {},
+
+	["WhoIsSethDaniel/toggle-lsp-diagnostics.nvim"] = {},
 }

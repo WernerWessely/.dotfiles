@@ -69,6 +69,9 @@ M.general = {
 		["<leader>P"] = { '"*P', "   paste from system clipboard", opts = { noremap = true } },
 
 		["<leader>of"] = { "<cmd> ProjectRoot <CR>", "   Cwd to project of buffer" },
+
+        -- Toggle diagnostics:
+		["<leader>dt"] = { "<cmd> ToggleDiag <CR>", "   Toggle diagnostics" },
 	},
 
 	i = {
