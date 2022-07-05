@@ -110,6 +110,11 @@ function v {
     nvim '"+Telescope find_files hidden=true"' $args
 }
 
+Remove-Alias c -ErrorAction SilentlyContinue
+function c {
+    z C:\
+}
+
 Invoke-Expression (& {
     $hook = if ($PSVersionTable.PSVersion.Major -lt 6) { 'prompt' } else { 'pwd' }
     (zoxide init --hook $hook powershell | Out-String)
