@@ -115,6 +115,11 @@ function c {
     z C:\
 }
 
+Remove-Alias t -ErrorAction SilentlyContinue
+function t {
+    tig $args
+}
+
 Invoke-Expression (& {
     $hook = if ($PSVersionTable.PSVersion.Major -lt 6) { 'prompt' } else { 'pwd' }
     (zoxide init --hook $hook powershell | Out-String)
