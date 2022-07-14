@@ -45,7 +45,7 @@ alias dc="docker-compose"
 alias kc="kubectl"
 alias mk="minikube"
 alias cdp='cd $(git rev-parse --show-toplevel)'
-alias t="tig"
+alias t="tig --all"
 
 # History settings:
 HISTFILE=~/.zsh_history

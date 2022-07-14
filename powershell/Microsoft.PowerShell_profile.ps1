@@ -117,7 +117,7 @@ function c {
 
 Remove-Alias t -ErrorAction SilentlyContinue
 function t {
-    tig $args
+    tig --all $args
 }
 
 Invoke-Expression (& {
