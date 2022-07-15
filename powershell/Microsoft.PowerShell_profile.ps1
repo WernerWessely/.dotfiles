@@ -100,6 +100,11 @@ function gbm {
     git branch -M $args
 }
 
+Remove-Alias gf -Force -ErrorAction SilentlyContinue
+function gf {
+    git fetch --all $args
+}
+
 Remove-Alias dc -Force -ErrorAction SilentlyContinue
 function dc {
     docker-compose $args
