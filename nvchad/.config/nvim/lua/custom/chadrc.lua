@@ -62,6 +62,12 @@ M.plugins = {
 				},
 			},
 		},
+		-- set some ui settings
+		["NvChad/ui"] = {
+			statusline = {
+				separator_style = "round", -- default/round/block/arrow
+			},
+		},
 	},
 
 	user = require("custom.plugins"),
@@ -75,11 +81,6 @@ M.ui = {
 	-- enable the cursor line
 	hl_override = {
 		CursorLine = { bg = "one_bg" },
-	},
-
-	-- set status line separator to round
-	statusline = {
-		separator_style = "round",
 	},
 }
 
