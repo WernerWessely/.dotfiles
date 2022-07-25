@@ -195,6 +195,18 @@
                 "hidden": false,
                 "name": "Git Bash",
                 "source": "Git"
+            },
+            {
+                "colorScheme": "Dracula",
+                "font": 
+                {
+                    "face": "FiraCode NF",
+                    "size": 10
+                },
+                "guid": "{aab79973-318f-43b6-a9bc-b4096493753f}",
+                "hidden": false,
+                "name": "Nushell",
+                "source": "nu"
             }
         ]
     },
@@ -268,6 +280,29 @@
             "selectionBackground": "#44475A",
             "white": "#F8F8F2",
             "yellow": "#F1FA8C"
+        },
+        {
+            "background": "#2E3440",
+            "black": "#3B4252",
+            "blue": "#81A1C1",
+            "brightBlack": "#3B4252",
+            "brightBlue": "#5E81AC",
+            "brightCyan": "#88C0D0",
+            "brightGreen": "#A3BE8C",
+            "brightPurple": "#B48EAD",
+            "brightRed": "#D08770",
+            "brightWhite": "#E5E9F0",
+            "brightYellow": "#EBCB8B",
+            "cursorColor": "#EBCB8B",
+            "cyan": "#88C0D0",
+            "foreground": "#E5E9F0",
+            "green": "#8FBCBB",
+            "name": "Nord",
+            "purple": "#B48EAD",
+            "red": "#BF616A",
+            "selectionBackground": "#434C5E",
+            "white": "#D8DEE9",
+            "yellow": "#EBCB8B"
         },
         {
             "background": "#282C34",
