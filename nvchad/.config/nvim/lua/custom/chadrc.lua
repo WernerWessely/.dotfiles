@@ -24,13 +24,6 @@ M.mappings = require("custom.mappings")
 
 -- load in plugins
 M.plugins = {
-
-	options = {
-		lspconfig = {
-			setup_lspconf = "custom.plugins.lspconfig",
-		},
-	},
-
 	override = {
 		-- enable git in tree
 		["kyazdani42/nvim-tree.lua"] = {

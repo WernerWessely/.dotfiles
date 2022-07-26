@@ -1,4 +1,12 @@
 return {
+    -- configure lsp-config
+	["neovim/nvim-lspconfig"] = {
+		config = function()
+			require("plugins.configs.lspconfig")
+			require("custom.plugins.lspconfig")
+		end,
+	},
+
 	-- add pounce
 	["rlane/pounce.nvim"] = {
 		config = function()
