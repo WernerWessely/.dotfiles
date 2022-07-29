@@ -68,10 +68,13 @@ M.general = {
 		["<leader>p"] = { '"*p', "   paste from system clipboard", opts = { noremap = true } },
 		["<leader>P"] = { '"*P', "   paste from system clipboard", opts = { noremap = true } },
 
-		["<leader>of"] = { "<cmd> ProjectRoot <CR>", "   Cwd to project of buffer" },
+		["<leader>of"] = { "<cmd> ProjectRoot <CR>", "   cwd to project of buffer" },
 
-        -- Toggle diagnostics:
-		["<leader>dt"] = { "<cmd> ToggleDiag <CR>", "   Toggle diagnostics" },
+		-- toggle diagnostics
+		["<leader>dt"] = { "<cmd> ToggleDiag <CR>", "   toggle diagnostics" },
+
+		-- add ; to end of line
+		["<leader>;"] = { "A;", "   insert ; at end of line" },
 	},
 
 	i = {
