@@ -1,5 +1,5 @@
 return {
-    -- configure lsp-config
+	-- configure lsp-config
 	["neovim/nvim-lspconfig"] = {
 		config = function()
 			require("plugins.configs.lspconfig")
@@ -66,5 +66,9 @@ return {
 	["junegunn/fzf"] = { run = "./install --bin" },
 	["junegunn/fzf.vim"] = {},
 
+	-- toggle lsp diagnostics
 	["WhoIsSethDaniel/toggle-lsp-diagnostics.nvim"] = {},
+
+	-- close all buffers but this one
+	["numtostr/BufOnly.nvim"] = { cmd = "BufOnly" },
 }

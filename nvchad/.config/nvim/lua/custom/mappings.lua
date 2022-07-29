@@ -119,11 +119,11 @@ M.bufferline = {
 
 	n = {
 		-- new buffer
-		["<leader>bn"] = { "<cmd> enew <CR>", "烙 new buffer" },
+		["<leader>bn"] = { "<cmd> enew <CR>", "烙   new buffer" },
 
 		-- cycle through buffers
-		["<C-n>"] = { "<cmd> Tbufnext <CR>", "  cycle next buffer" },
-		["<C-p>"] = { "<cmd> Tbufprev <CR>", "  cycle prev buffer" },
+		["<C-n>"] = { "<cmd> Tbufnext <CR>", "   cycle next buffer" },
+		["<C-p>"] = { "<cmd> Tbufprev <CR>", "   cycle prev buffer" },
 
 		-- close buffer + hide terminal buffer
 		["<leader>bd"] = {
@@ -132,6 +132,7 @@ M.bufferline = {
 			end,
 			"   close buffer",
 		},
+		["<leader>ba"] = { "<cmd> BufOnly <CR>", "   close all other buffers" },
 	},
 }
 
