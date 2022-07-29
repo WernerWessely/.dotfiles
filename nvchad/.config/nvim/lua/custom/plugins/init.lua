@@ -71,4 +71,12 @@ return {
 
 	-- close all buffers but this one
 	["numtostr/BufOnly.nvim"] = { cmd = "BufOnly" },
+
+	-- trouble for diagnostics
+	["folke/trouble.nvim"] = {
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup({})
+		end,
+	},
 }

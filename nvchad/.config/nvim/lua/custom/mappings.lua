@@ -70,8 +70,11 @@ M.general = {
 
 		["<leader>of"] = { "<cmd> ProjectRoot <CR>", "   cwd to project of buffer" },
 
-		-- toggle diagnostics
-		["<leader>dt"] = { "<cmd> ToggleDiag <CR>", "   toggle diagnostics" },
+		-- diagnostics
+		["<leader>dd"] = { "<cmd> ToggleDiag <CR>", "   toggle diagnostics" },
+		["<leader>dt"] = { "<cmd> TroubleToggle <CR>", "   toggle trouble" },
+		["<leader>df"] = { "<cmd> Trouble <CR>", "   focus trouble" },
+		["<leader>dr"] = { "<cmd> TroubleRefresh <CR>", "   refresh trouble" },
 
 		-- add ; to end of line
 		["<leader>;"] = { "A;", "   insert ; at end of line" },
